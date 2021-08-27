@@ -55,6 +55,8 @@
 
 
         // Delete gambar
+        // cek apakah ada gambar yg akan didelete
+        // delete gambar sesuai idgambar
         if (isset($_POST['gambar_dihapus'])) {
             $sql = 'DELETE FROM gambar where idgambar = ?';
             $stmt = $koneksi->prepare($sql);
