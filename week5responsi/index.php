@@ -124,25 +124,28 @@
     $next = $p + 1;
     $prev = $p - 1;
     if ($p > 1) {
-        if (isset($_GET['orderby']))
-            echo "<li class='prev'><a href='?judul=$judul&datapage=$perpage&p=$prev&orderby=judul&type=$type' >Prev</a></li>";
-        else
+        if (isset($_GET['orderby'])) {
+            $orderby = $_GET['orderby'];
+            echo "<li class='prev'><a href='?judul=$judul&datapage=$perpage&p=$prev&orderby=$orderby&type=$type' >Prev</a></li>";
+        } else
             echo "<li class='prev'><a href='?judul=$judul&datapage=$perpage&p=$prev' >Prev</a></li>";
     }
     for ($i = $firstPage; $i <= $lastPage; $i++) {
         if ($p == $i) {
             echo "<li class='active'>$i</li>";
         } else {
-            if (isset($_GET['orderby']))
-                echo "<li class='prev'><a href='?judul=$judul&datapage=$perpage&p=$i&orderby=judul&type=$type'>$i</a></li>";
-            else
+            if (isset($_GET['orderby'])) {
+                $orderby = $_GET['orderby'];
+                echo "<li class='prev'><a href='?judul=$judul&datapage=$perpage&p=$i&orderby=$orderby&type=$type'>$i</a></li>";
+            } else
                 echo "<li><a href='?judul=$judul&datapage=$perpage&p=$i'>$i</a></li>";
         }
     }
     if ($p < $jumpage) {
-        if (isset($_GET['orderby']))
-            echo "<li class='next'><a href='?judul=$judul&datapage=$perpage&p=$next&orderby=judul&type=$type' >Next</a></li>";
-        else
+        if (isset($_GET['orderby'])) {
+            $orderby = $_GET['orderby'];
+            echo "<li class='next'><a href='?judul=$judul&datapage=$perpage&p=$next&orderby=$orderby&type=$type' >Next</a></li>";
+        } else
             echo "<li class='next'><a href='?judul=$judul&datapage=$perpage&p=$next' >Next</a></li>";
     }
     echo "</ul>";
