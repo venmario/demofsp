@@ -1,0 +1,50 @@
+.kotak-kuning {
+    padding: 5px;
+    box-sizing: border-box;
+    min-height: 200px;
+    background-color: yellow;
+    float: left;
+    width: 48%;
+    margin: 1%;
+}
+
+.gambar-container {
+    float: left;
+    width: 200px;
+}
+
+.gambarku {
+    max-width: 100%;
+}
+
+.isi-artikel {
+    padding-left: 220px;
+}
+
+@media (max-width:1199px) {
+    .kotak-kuning {
+        float: none;
+        width: 98%;
+    }
+
+    .md-hide {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .gambar-container {
+        float: none;
+        width: 100%;
+    }
+
+    .gambarku {
+        width: 100%;
+    }
+
+    .isi-artikel {
+        padding-left: 0;
+    }
+
+
+}

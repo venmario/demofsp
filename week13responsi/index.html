@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 0.5fr 1fr 1fr 0.75fr;
+            grid-template-areas: "area-header area-header area-header area-header"
+                "area-nav area-nav area-nav area-nav"
+                "area-side1 area-content1 area-content2 area-side2"
+                "area-side1 area-content3 area-content4 area-side2"
+                "area-footer area-footer area-footer area-footer";
+        }
+
+        .header {
+            background-color: yellow;
+            grid-area: area-header;
+        }
+
+        .nav {
+            background-color: antiquewhite;
+            grid-area: area-nav;
+        }
+
+        .footer {
+            background-color: gray;
+            grid-area: area-footer;
+        }
+
+        .side {
+            background-color: lightblue;
+        }
+
+        #content1 {
+            background-color: pink;
+            grid-area: area-content1;
+        }
+
+        #content2 {
+            background-color: burlywood;
+            grid-area: area-content2;
+        }
+
+        #content3 {
+            background-color: orange;
+            grid-area: area-content3;
+        }
+
+        #content4 {
+            background-color: lightgreen;
+            grid-area: area-content4;
+        }
+
+        #side1 {
+            grid-area: area-side1;
+        }
+
+        #side2 {
+            grid-area: area-side2;
+        }
+
+        @media (max-width:576px) {
+            .nav {
+                display: none;
+            }
+
+            .container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 0.5fr 1fr 1fr 0.75fr;
+                grid-template-areas: "area-header area-header"
+                    "area-content1 area-content2"
+                    "area-content3 area-content4"
+                    "area-side1 area-side2"
+                    "area-footer area-footer";
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="nav">nav</div>
+        <div class="footer">footer</div>
+        <div class="side" id="side1">side1</div>
+        <div class="side" id="side2">side2</div>
+        <div class="content" id="content1">content1</div>
+        <div class="content" id="content2">content2</div>
+        <div class="content" id="content3">content3</div>
+        <div class="content" id="content4">content4</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week12</title>
+    <style>
+        .container {
+            border: 5px solid black;
+            display: flex;
+            padding: 5px;
+            box-sizing: border-box;
+            height: 500px;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-content: space-between;
+            /* align-items: center; */
+            flex-wrap: wrap;
+        }
+
+        /* .container::after {
+            content: '';
+            display: block;
+            clear: both;
+        } */
+
+        .container div {
+            height: 100px;
+            /* width: 25%; */
+            /* flex-basis: 33.33%; */
+            flex-basis: 300px;
+        }
+
+        .content1 {
+            background-color: gray;
+            /* flex-basis: 30%; */
+            /* width: 100px; */
+            /* flex-grow: 1; */
+        }
+
+        .content2 {
+            background-color: yellow;
+            /* flex-basis: 60%; */
+            /* width: 50px; */
+            /* flex-grow: 5; */
+        }
+
+        .content3 {
+            background-color: gray;
+            /* flex-basis: 30%; */
+            /* flex-grow: 1; */
+            /* width: 75px; */
+        }
+
+        @media (max-width:576px) {
+            .content2 {
+                /* flex-grow: 2; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content1">1</div>
+        <div class="content2">2</div>
+        <div class="content3">3</div>
+    </div>
+</body>
+
+</html>

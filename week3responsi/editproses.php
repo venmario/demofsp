@@ -65,6 +65,7 @@
                 $ext = pathinfo($nama_file, PATHINFO_EXTENSION);
                 $idgambar = trim($nama_file, '.' . $ext);
                 $stmt->execute();
+                // if ($stmt->affected_rows > 0
                 if (file_exists("gambar/$idgambar.$ext")) {
                     unlink("gambar/$idgambar.$ext");
                 }

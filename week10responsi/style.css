@@ -1,0 +1,32 @@
+div {
+    width: 31%;
+    height: 200px;
+    background-color: coral;
+    float: left;
+    margin: 1%;
+}
+
+div a {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    div {
+        width: 48%;
+    }
+}
+
+/* lebar HP */
+@media (max-width: 576px) {
+    div {
+        width: 98%;
+    }
+
+    div p {
+        display: none;
+    }
+
+    div a {
+        display: block;
+    }
+}
